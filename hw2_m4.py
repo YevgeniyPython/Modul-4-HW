@@ -1,11 +1,11 @@
 def get_cats_info(path):
-    cats = []
-    cat_info = {"id":"", "name":"", "age":""} 
+    cats = [] 
     try:
         with open (path, "r", encoding='utf-8') as fh:
             while True:        
                 lines = [el.strip() for el in fh.readlines()]
                 for str in lines:
+                    cat_info = {"id":"", "name":"", "age":""}
                     str = str.split(",")
                     cat_info["id"] = str[0]
                     cat_info["name"] = str[1]
